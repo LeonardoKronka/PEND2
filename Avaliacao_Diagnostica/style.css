@@ -1,0 +1,508 @@
+/* ==========================================
+   ESTILOS PROFISSIONAIS - Leonardo Kronka
+   ========================================== */
+
+/* --- Variáveis Globais --- */
+:root {
+    --primary: #e1000f;
+    --primary-dark: #b8000c;
+    --primary-light: #ff1a2b;
+    --bg-body: #f0f2f5;
+    --bg-card: #ffffff;
+    --text-primary: #1a1a2e;
+    --text-secondary: #555570;
+    --text-light: #8888a0;
+    --border-color: #e0e0e8;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    animation: headerGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes headerGlow {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(10%, 10%); }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+/* Placeholder da foto */
+.foto-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    transition: var(--transition);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.foto-placeholder:hover {
+    transform: scale(1.05);
+    border-color: white;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.foto-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.header-texto h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header-texto p {
+    font-size: 1.05rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+main {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.sobre, .contato {
+    flex: 1;
+    min-width: 280px;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.sobre:hover, .contato:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.sobre h2, .contato h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sobre h2 i, .contato h2 i {
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+.sobre p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Info extra (ícones no sobre) */
+.info-extra {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.info-extra span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-body);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.info-extra span i {
+    color: var(--primary);
+    font-size: 0.85rem;
+}
+
+.info-extra span:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.info-extra span:hover i {
+    color: white;
+}
+
+/* ==========================================
+   FORMULÁRIO
+   ========================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    background: #fafafa;
+    transition: var(--transition);
+    outline: none;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(225, 0, 15, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-light);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Estado de erro no formulário */
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #e74c3c;
+    background: #fff5f5;
+}
+
+.form-group.error input:focus,
+.form-group.error textarea:focus {
+    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.15);
+}
+
+.error-message {
+    font-size: 0.8rem;
+    color: #e74c3c;
+    min-height: 0;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.error-message.visible {
+    opacity: 1;
+    min-height: 18px;
+}
+
+/* Estado de sucesso no input */
+.form-group.success input,
+.form-group.success textarea {
+    border-color: #2ecc71;
+    background: #f0fff4;
+}
+
+/* ==========================================
+   BOTÃO
+   ========================================== */
+button[type="submit"] {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+}
+
+button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.6s;
+}
+
+button[type="submit"]:hover::before {
+    left: 100%;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(225, 0, 15, 0.35);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+button[type="submit"] i {
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+button[type="submit"]:hover i {
+    transform: translateX(4px);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #ccc;
+    padding: 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-info h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    color: #8888b0;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ccc;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(225, 0, 15, 0.4);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+    padding: 16px 20px;
+    font-size: 0.85rem;
+    color: #6666a0;
+}
+
+/* ==========================================
+   MENSAGEM DE SUCESSO (adicionada via JS)
+   ========================================== */
+.success-message {
+    background: #2ecc71;
+    color: white;
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    font-weight: 600;
+    animation: slideIn 0.4s ease;
+    margin-top: 8px;
+}
+
+.success-message i {
+    margin-right: 8px;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   RESPONSIVO - TABLETS E DESKTOP
+   ========================================== */
+@media (min-width: 768px) {
+    header {
+        padding: 60px 40px;
+    }
+
+    .header-texto h1 {
+        font-size: 2.5rem;
+    }
+
+    .foto-placeholder {
+        width: 140px;
+        height: 140px;
+        font-size: 56px;
+    }
+
+    main {
+        padding: 60px 40px;
+        flex-wrap: nowrap;
+    }
+
+    .sobre, .contato {
+        width: 50%;
+        padding: 40px;
+    }
+
+    .footer-content {
+        padding: 48px 40px 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-texto h1 {
+        font-size: 3rem;
+    }
+
+    .foto-placeholder {
+        width: 160px;
+        height: 160px;
+        font-size: 64px;
+    }
+}
+
+/* ==========================================
+   ANIMAÇÕES ADICIONAIS
+   ========================================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sobre, .contato {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.contato {
+    animation-delay: 0.1s;
+}
+

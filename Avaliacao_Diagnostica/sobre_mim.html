@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim | Leonardo Kronka</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header> 
+        <div class="header-content">
+            <div class="foto-placeholder">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="header-texto">
+                <h1>Leonardo Kronka Rodrigues</h1>
+                <p>Desenvolvedor, empreendedor e sonhador</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+     <main>
+        <section class="sobre">
+            <h2><i class="fas fa-user-circle"></i> Sobre Mim</h2>
+            <p>Olá! Meu nome é Leonardo Kronka Rodrigues, tenho 17 anos e estou cursando Desenvolvimento de Sistemas no SENAI, atualmente estou focado no desenolvimento da minha marca de roupa, e no planejamento para meu intercâmbio em 2027</p>
+            <div class="info-extra">
+                <span><i class="fas fa-map-marker-alt"></i> Brasil</span>
+                <span><i class="fas fa-code"></i> Desenvolvedor em formação</span>
+                <span><i class="fas fa-lightbulb"></i> Empreendedor</span>
+            </div>
+        </section>
+
+        <!-- Formulário de contato -->
+         <section class="contato">
+            <h2><i class="fas fa-envelope"></i> Entre em contato</h2>
+            <form id="meuFormulario">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    <span class="error-message" id="erro-nome"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    <span class="error-message" id="erro-email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+                    <span class="error-message" id="erro-mensagem"></span>
+                </div>
+
+                <button type="submit">Enviar mensagem <i class="fas fa-paper-plane"></i></button>
+            </form>
+         </section>
+     </main>
+
+     <!-- Rodapé -->
+      <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Leonardo Kronka Rodrigues</h3>
+                <p>Desenvolvedor &amp; Empreendedor</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LeoKronka — Todos os direitos reservados</p>
+        </div>
+      </footer>
+
+      <script src="script.js"></script>
+</body>
+</html>
