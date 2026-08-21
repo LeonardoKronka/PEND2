@@ -19,6 +19,8 @@ class Estoque {
 
     constructor() {
         this.produtos = [];
+
+        this.carregarProdutos();
     }
 
     adicionarProduto(produto) {
@@ -28,6 +30,11 @@ class Estoque {
     excluirProduto(index) {
         this.produtos.splice(index, 1);
         this.exibirNaTela();
+        this.salvarProdutos();
+    }
+
+    salvarProdutos() {
+        localStorage.setItem("produtos", JSON.stringify(this.produtos));
     }
 
 
@@ -48,10 +55,20 @@ class Estoque {
             `;
         })
     }
-    
-}
+
+    carregarProdutos() {
+        const dados = localStorage.getItem("produtos");
+
+        if (dados) {
+            const produtosSalvos = JSON.parse(dados);
+
+            this.produtos = produtosSalvos;
+        };
+    };
+};
 
 const estoque = new Estoque();
+
 
 const nome = document.querySelector("#nome");
 const preco = document.querySelector("#preco");
@@ -67,4 +84,7 @@ botaoCadastrar.addEventListener("click", function() {
     produto.aplicarDesconto();
     estoque.adicionarProduto(produto);
     estoque.exibirNaTela();
+    estoque.salvarProdutos();
 });
+
+estoque.exibirNaTela();
