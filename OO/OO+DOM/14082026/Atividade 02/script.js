@@ -25,18 +25,26 @@ class Estoque {
         this.produtos.push(produto);
     }
 
+    excluirProduto(index) {
+        this.produtos.splice(index, 1);
+        this.exibirNaTela();
+    }
+
+
+
     //Método para exibir os dados do produto ja com desconto na tela
     exibirNaTela() {
         const resultado = document.querySelector("#resultado");
 
         resultado.innerHTML = "";
 
-        this.produtos.forEach(produto => {
+        this.produtos.forEach((produto, index) => {
             resultado.innerHTML += `
                 <p>Nome: ${produto.nome}</p>
                 <p>Preço: ${produto.preco}</p>
                 <p>Categoria: ${produto.categoria}</p>
                 <p>Desconto: ${produto.desconto}%</p>
+                <button onclick="estoque.excluirProduto(${index})">Excluir Produto</button>
             `;
         })
     }
