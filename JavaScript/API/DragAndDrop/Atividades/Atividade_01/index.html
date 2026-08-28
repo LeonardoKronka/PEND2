@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco - Separação de Lixo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="jogo">
+        <header>
+            <p class="categoria">JOGO EDUCATIVO</p>
+            <h1>Eco</h1>
+            <p>Arraste cada resíduo até a lixeira correta.</p>
+        </header>
+
+        <div id="mensagem">Escolha um resíduo para começar!</div>
+
+        <section class="area-residuos">
+            <h2>Resíduos</h2>
+
+            <div class="residuos">
+                <div id="jornal" class="residuo" data-tipo="papel" draggable="true">
+                    <span>📰</span>
+                    <p>Jornal</p>
+                </div>
+
+                <div id="copo" class="residuo" data-tipo="plastico" draggable="true">
+                    <span>🥤</span>
+                    <p>Copo plástico</p>
+                </div>
+
+                <div id="garrafa" class="residuo" data-tipo="vidro" draggable="true">
+                    <span>🍾</span>
+                    <p>Garrafa de vidro</p>
+                </div>
+
+                <div id="lata" class="residuo" data-tipo="metal" draggable="true">
+                    <span>🥫</span>
+                    <p>Lata</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="area-lixeiras">
+            <h2>Lixeiras</h2>
+
+            <div class="lixeiras">
+                <div class="lixeira papel" data-tipo="papel">
+                    <span class="icone-lixeira">♻</span>
+                    <h3>Papel</h3>
+                    <p>Solte aqui</p>
+                </div>
+
+                <div class="lixeira plastico" data-tipo="plastico">
+                    <span class="icone-lixeira">♻</span>
+                    <h3>Plástico</h3>
+                    <p>Solte aqui</p>
+                </div>
+
+                <div class="lixeira vidro" data-tipo="vidro">
+                    <span class="icone-lixeira">♻</span>
+                    <h3>Vidro</h3>
+                    <p>Solte aqui</p>
+                </div>
+
+                <div class="lixeira metal" data-tipo="metal">
+                    <span class="icone-lixeira">♻</span>
+                    <h3>Metal</h3>
+                    <p>Solte aqui</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #eef7f1;
+    color: #20352a;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.jogo {
+    width: min(100%, 1050px);
+    margin: auto;
+    padding: 35px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 12px 35px rgba(28, 75, 49, 0.12);
+}
+
+header {
+    text-align: center;
+}
+
+.categoria {
+    margin-bottom: 5px;
+    color: #298a55;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h1 span {
+    color: #32a863;
+}
+
+header > p:last-child {
+    margin-top: 7px;
+    color: #66756d;
+}
+
+#mensagem {
+    margin: 28px 0;
+    padding: 14px;
+    border-radius: 10px;
+    background: #edf1ef;
+    color: #53635a;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#mensagem.mensagem-certa {
+    background: #dff6e8;
+    color: #177442;
+}
+
+#mensagem.mensagem-errada {
+    background: #ffe3e3;
+    color: #b42929;
+}
+
+h2 {
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+
+.residuos,
+.lixeiras {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.residuo {
+    padding: 18px 10px;
+    border: 2px solid #dce7e0;
+    border-radius: 12px;
+    background: #ffffff;
+    text-align: center;
+    cursor: grab;
+    transition: 0.2s;
+}
+
+.residuo:hover {
+    border-color: #58b77b;
+    transform: translateY(-3px);
+}
+
+.residuo:active {
+    opacity: 0.6;
+    cursor: grabbing;
+}
+
+.residuo span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 40px;
+}
+
+.residuo p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.area-lixeiras {
+    margin-top: 32px;
+}
+
+.lixeira {
+    min-height: 190px;
+    padding: 24px 12px;
+    border: 3px dashed transparent;
+    border-radius: 15px;
+    color: #ffffff;
+    text-align: center;
+    transition: 0.25s;
+}
+
+.lixeira.papel { background: #287ac5; }
+.lixeira.plastico { background: #d84a4a; }
+.lixeira.vidro { background: #26935a; }
+.lixeira.metal { background: #e0ac27; }
+
+.icone-lixeira {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 50px;
+}
+
+.lixeira h3 {
+    font-size: 19px;
+}
+
+.lixeira > p {
+    margin-top: 5px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.lixeira .residuo {
+    margin-top: 14px;
+    padding: 10px;
+    color: #20352a;
+    cursor: default;
+}
+
+.lixeira .residuo span {
+    display: inline;
+    margin-right: 5px;
+    font-size: 22px;
+}
+
+.lixeira .residuo p {
+    display: inline;
+}
+
+.lixeira.acerto {
+    border-color: #ffffff;
+    transform: scale(1.04);
+}
+
+.lixeira.erro {
+    border-color: #7b1515;
+    transform: translateX(5px);
+}
+
+@media (max-width: 750px) {
+    .jogo {
+        padding: 24px 18px;
+    }
+
+    .residuos,
+    .lixeiras {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
