@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsToday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topo">
+        <h1>NewsToday</h1>
+        <nav class="menu">
+            <a href="#inicio" id="inicio-link">Início</a>
+            <a href="#busca">Buscar notícias</a>
+        </nav>
+    </header>
+
+    <main id="inicio" class="conteudo">
+        <div class="cabecalho-secao">
+            <div>
+                <span class="tag-categoria">Atualizações</span>
+                <h2>Últimas notícias</h2>
+                <p>Publicações da Agência IBGE Notícias.</p>
+            </div>
+            <button id="atualizar" type="button" class="botao-simples">Atualizar</button>
+        </div>
+
+        <form id="busca" class="busca" role="search">
+            <label for="termo">Buscar notícias</label>
+            <div class="busca-campos">
+                <input id="termo" type="search" placeholder="Ex.: trabalho, educação, tecnologia" maxlength="80">
+                <button type="submit" class="botao-enviar">Buscar</button>
+            </div>
+        </form>
+
+        <p id="mensagem" role="status" aria-live="polite">Carregando notícias...</p>
+        <div id="noticias" class="grade-noticias"></div>
+    </main>
+
+    <footer class="rodape">
+        <p>NewsToday &copy; 2026 · Projeto escolar de programação front-end</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
