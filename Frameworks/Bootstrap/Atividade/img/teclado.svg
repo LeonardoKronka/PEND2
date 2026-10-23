@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ede9fe"/>
+      <stop offset="1" stop-color="#ddd6fe"/>
+    </linearGradient>
+    <linearGradient id="rgb" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset=".25" stop-color="#ec4899"/>
+      <stop offset=".5" stop-color="#f59e0b"/>
+      <stop offset=".75" stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <pattern id="k" x="81" y="88" width="20" height="17" patternUnits="userSpaceOnUse">
+      <rect width="17" height="14" rx="3" fill="#4b5563"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="225" fill="url(#bg)"/>
+  <ellipse cx="200" cy="182" rx="140" ry="7" fill="#0f172a" opacity=".1"/>
+  <rect x="70" y="78" width="260" height="92" rx="10" fill="#1f2937"/>
+  <rect x="81" y="88" width="237" height="48" fill="url(#k)"/>
+  <rect x="81" y="139" width="57" height="14" fill="url(#k)"/>
+  <rect x="141" y="139" width="97" height="14" rx="3" fill="#6b7280"/>
+  <rect x="241" y="139" width="77" height="14" fill="url(#k)"/>
+  <rect x="81" y="88" width="17" height="14" rx="3" fill="#8b5cf6"/>
+  <rect x="301" y="105" width="17" height="31" rx="3" fill="#8b5cf6"/>
+  <rect x="78" y="160" width="244" height="4" rx="2" fill="url(#rgb)"/>
+</svg>

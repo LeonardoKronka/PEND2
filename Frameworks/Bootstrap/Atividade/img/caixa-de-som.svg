@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffedd5"/>
+      <stop offset="1" stop-color="#fed7aa"/>
+    </linearGradient>
+    <pattern id="g" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="2.2" fill="#4b5563"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="225" fill="url(#bg)"/>
+  <ellipse cx="200" cy="174" rx="110" ry="7" fill="#0f172a" opacity=".1"/>
+  <rect x="100" y="82" width="200" height="76" rx="38" fill="#1f2937"/>
+  <rect x="128" y="90" width="144" height="60" fill="url(#g)"/>
+  <rect x="96" y="86" width="16" height="68" rx="8" fill="#f97316"/>
+  <rect x="288" y="86" width="16" height="68" rx="8" fill="#f97316"/>
+  <rect x="178" y="112" width="44" height="16" rx="8" fill="#f97316"/>
+  <g fill="none" stroke="#f97316" stroke-width="4" stroke-linecap="round">
+    <path d="M322 100 Q334 120 322 140"/>
+    <path d="M336 90 Q354 120 336 150"/>
+    <path d="M78 100 Q66 120 78 140"/>
+    <path d="M64 90 Q46 120 64 150"/>
+  </g>
+</svg>
